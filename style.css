@@ -340,5 +340,131 @@ padding:24px;
 flex-basis:140px;
 
 }
+/* ---------- DEV BLOG ---------- */
 
+.blog-post{
+
+    border-top:3px dashed var(--lavender);
+
+    padding:20px 0;
+
+}
+
+.blog-post:first-of-type{
+
+    border-top:none;
+
+}
+
+.blog-post summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+}
+
+.blog-post summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.blog-post summary::before{
+
+    content:"▶";
+
+    display:inline-block;
+
+    margin-right:10px;
+
+    color:var(--bubblegum-deep);
+
+    transition:.2s;
+
+}
+
+.blog-post[open] summary::before{
+
+    content:"▼";
+
+}
+
+.date{
+
+    display:block;
+
+    font-size:.9rem;
+
+    color:#777;
+
+    margin-bottom:6px;
+
+    font-weight:600;
+
+}
+
+.blog-post h3{
+
+    display:inline;
+
+    font-family:"Fredoka",sans-serif;
+
+    font-size:1.6rem;
+
+}
+
+.blog-content{
+
+    margin-top:18px;
+
+    padding-left:28px;
+
+    line-height:1.8;
+
+}
+
+.pink{
+
+    color:#ff5d8f;
+
+}
+
+.purple{
+
+    color:#8b5cf6;
+
+}
+
+.green{
+
+    color:#2fbf71;
+
+}
+
+.blog-post[open]{
+
+    animation:fadeIn .3s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(-5px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
 }
